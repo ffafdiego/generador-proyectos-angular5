@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Diego Berríos",
+      "authorEmail": "diego.berrios@3it.cl",
+      "authorUrl": ""
+    }
+  }
+}
