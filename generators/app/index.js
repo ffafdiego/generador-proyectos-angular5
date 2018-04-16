@@ -179,6 +179,11 @@ module.exports = class extends Generator {
         this.destinationPath(this.props.appName + '/tsconfig.json'),
         context
       );
+      this.fs.copyTpl(
+        this.templatePath('base-lib/tslint.json'),
+        this.destinationPath(this.props.appName + '/tslint.json'),
+        context
+      );
       this.fs.copy(
         this.templatePath('base-lib/e2e'),
         this.destinationPath(this.props.appName + '/e2e')
