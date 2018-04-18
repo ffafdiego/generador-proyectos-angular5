@@ -1,31 +1,62 @@
-# GbHomeLibrary
+# Bienvenido a la librería <%= appName %>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+## Prerequisitos
 
-## Development server
+Para correr este proyecto debes tener instalado node(v > 8), npm(v > 5.6).
+Si no lo tienes descárgalos de acá:
+<p>https://nodejs.org/es/download/</p>
+<p>https://www.npmjs.com/get-npm</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Además debes instalar la librería <a href="https://github.com/angular/angular-cli">angular-cli</a>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+$ npm install -g @angular/cli
+```
 
-## Build
+## Comenzando
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Estas instrucciones te darán una guía para generar el proyecto base en Angular 5.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Instalando
 
-## Running end-to-end tests
+Para instalar las dependencias del proyecto debes realizarlo con el siguiente comando:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+$ npm install
+```
 
-## Further help
+## Corriendo la librería en local
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para correr la aplicación sólo debes ejecutar el siguiente comando:
 
-## PARA GENERAR LIBRERIA
-npm run packagr
-npm publish dist
+```
+ng serve
+```
+
+Y listo la aplicación quedará corriendo en http://localhost:4200
+
+## Estructura del proyecto
+
+El proyecto tiene los códigos en la carpeta src/app.
+Sólo viene por defecto un módulo con el nombre  <%= module %>.
+
+## Empaquetado de Librería
+### Archivos Claves
+Para generar una librería, sólo debemos empaquetar los componentes que nos interesan, y esto en Angular 5 se realiza a través de un archivo de configuración llamado
+```
+ "public_api.ts
+ ```
+ ### Comandos para empaquetar
+Luego de declarar los componentes a exportar de la librería se debe generar el siguiente comando:
+
+```
+$ npm run packagr
+ ```
+ ### Publicado a Nexus
+Para publicar a nexus debes ejecutar el siguiente comando:
+```
+$ npm publis dist
+ ```
+ Y listo ya puedes comenzar a utilizar tu librería desde tu aplicación web.

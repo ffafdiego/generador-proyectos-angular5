@@ -1,27 +1,61 @@
-# Base
+# Bienvenido a la aplicación <%= appName %>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+## Prerequisitos
 
-## Development server
+Para correr este proyecto debes tener instalado node(v > 8), npm(v > 5.6).
+Si no lo tienes descárgalos de acá:
+<p>https://nodejs.org/es/download/</p>
+<p>https://www.npmjs.com/get-npm</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Además debes instalar la librería <a href="https://github.com/angular/angular-cli">angular-cli</a>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+$ npm install -g @angular/cli
+```
 
-## Build
+## Comenzando
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Estas instrucciones te darán una guía para generar el proyecto base en Angular 5.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Instalando
 
-## Running end-to-end tests
+Para instalar las dependencias del proyecto debes realizarlo con el siguiente comando:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+$ npm install
+```
 
-## Further help
+## Corriendo la aplicación en local
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para correr la aplicación sólo debes ejecutar el siguiente comando:
+
+```
+ng serve
+```
+
+Y listo la aplicación quedará corriendo en http://localhost:4200
+
+## Estructura del proyecto
+
+El proyecto tiene los códigos en la carpeta src/app
+
+Ahí podemos ver el componente root llamado AppComponent, el se descompone en 3 partes que coinciden en la separación por html del sitio. Header, Footer y RouterOutlet.
+
+<p>---------------------------</p>
+HEADER
+<p>---------------------------</p>
+ROUTER-OUTLET
+<p>---------------------------</p>
+FOOTER
+<p>---------------------------</p>
+
+El proyecto incluye un componente por defecto llamado HomeComponent, que se reemplaza por router-outlet dependiendo de la ruta del navegador.
+
+## Generar versión Web para producción
+Para generar la aplicación minificada se debe ejecutar el siguiente comando:
+
+```
+$ ng build --prod
+```
